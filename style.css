@@ -1,0 +1,80 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 4px solid black;
+    background: white;
+}
+
+.grid-item {
+    width: 18vw; /* Responsive for phone */
+    height: 18vw;
+    max-width: 70px;
+    max-height: 70px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.grid-item.won {
+    background-color: #90ee90;
+    color: transparent;
+    position: relative;
+}
+
+.grid-item.won::after {
+    content: '🎁';
+    position: absolute;
+    color: black;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border: 5px solid black;
+    width: 80%;
+    max-width: 300px;
+}
+
+.ans-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+.penalty-text {
+    color: red;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+}
+
+#final-screen {
+    display: none;
+    text-align: center;
+}

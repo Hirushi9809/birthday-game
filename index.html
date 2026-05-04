@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Birthday Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Confetti Library for the win effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="game-view">
+        <h1 class="header-title">TAP A NUMBER</h1>
+        <div id="grid" class="grid-container"></div>
+    </div>
+
+    <div id="final-screen">
+        <h1 class="birthday-wish">HAPPY BIRTHDAY! 🎂</h1>
+        <p>All 25 gifts are yours!</p>
+    </div>
+
+    <!-- Question Modal -->
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title">Gift #</h2>
+            <p id="question-text"></p>
+            <div class="button-group">
+                <button id="opt0" class="ans-btn"></button>
+                <button id="opt1" class="ans-btn"></button>
+            </div>
+            <p id="penalty" class="penalty-text">WRONG! Give her a kiss! 💋</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
